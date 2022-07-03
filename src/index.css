@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-CTA-text-light-red: hsl(356, 100%, 66%);
+  --primary-CTA-hover-background-very-light-red: hsl(355, 100%, 74%);
+  --primary-headings-very-dark-blue: hsl(208, 49%, 24%);
+
+  --neutral-text-white: hsl(0, 0%, 100%);
+  --neutral-footer-text-grayish-blue: hsl(240, 2%, 79%);
+  --neutral-body-copy-very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --neutral-footer-background-very-dark-black-blue: hsl(240, 10%, 16%);
+
+  --background-gradient-introCTA-mobileNav: linear-gradient(
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  --background-gradient-body: linear-gradient(
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
+
+  --body-fs: 16px;
+
+  --Overpass-font-family: "Overpass", sans-serif;
+  --Ubuntu-font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  background-color: royalblue;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: var(--Overpass-font-family);
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display: flex;
+}
+
+.App {
+  min-height: 100vh;
+  min-width: 100vw;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  font-size: 1rem;
+  max-width: 100%;
+
+  /* box-shadow: -1em 1em 3em rgba(0, 0, 0, 0.1), 1em 1em 3em rgba(0, 0, 0, 0.1); */
+}
+
+.hide {
+  display: none;
 }
