@@ -56,7 +56,7 @@ html:focus-within {
 .App {
   min-height: 100vh;
   min-width: 100vw;
-  /* background-color: red; */
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -4,14 +4,14 @@ import "./Header.css";
 
 export default function Header() {
   return (
-    <section className="header bg-orange-300">
+    <section className="header bg-red-400 flex flex-col justify-center items-center ">
       <Navbar />
-      <div className="headre-body-container">
-        <h1>A modern publishing platform</h1>
-        <p>Grow your audience and build your online brand</p>
-        <div className="header-body-link-container">
-          <button className="header-body-link">Start for Free</button>
-          <button className="header-body-link">Learn More</button>
+      <div className="header-body-container m-auto flex flex-col gap-y-4 justify-center items-center text-white">
+        <h1 className="text-center text-4xl font-bold">A modern publishing platform</h1>
+        <p className="text-center text-lg w-9/12">Grow your audience and build your online brand</p>
+        <div className="header-body-link-container text-center flex gap-x-6">
+          <button className="header-body-link border px-5 font-bold py-3 rounded-3xl text-white">Start for Free</button>
+          <button className="header-body-link border px-5 font-bold py-3 rounded-3xl text-white">Learn More</button>
         </div>
       </div>
     </section>

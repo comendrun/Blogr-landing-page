@@ -1,13 +1,16 @@
 import React from "react";
 import TextBox from "../../Mini Components/TextBox";
+import partOneImage from "../../../Assets/images/illustration-editor-mobile.svg";
 
 export default function BodyPartOne() {
   return (
-    <div className="body-part-one-container">
-      <h2> Designed for the future</h2>
+    <div className="body-part-one-container flex flex-col gap-10">
+      <h2 className="font-bold text-center text-3xl">
+        Designed for the future
+      </h2>
       <div className="body-part-one-body">
-        <img className="body-part-one-image" src="" alt="" />
-        <div className="body-part-one-body-text">
+        <img className="body-part-one-image" src={partOneImage} alt="" />
+        <div className="body-part-one-body-text w-10/12 text-center m-auto flex flex-col gap-12">
           <TextBox textBoxHeader="Introducing an extensible editor">
             Blogr features an exceedingly intuitive interface which lets you
             focus on one thing: creating content. The editor supports management

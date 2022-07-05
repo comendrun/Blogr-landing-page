@@ -4,10 +4,9 @@ import TextBox from "../../Mini Components/TextBox";
 export default function BodyPartThree() {
   return (
     <div className="body-part-three-container">
-      <h2> Designed for the future</h2>
       <div className="body-part-three-body">
         <img className="body-part-three-image" src="" alt="" />
-        <div className="body-part-three-body-text">
+        <div className="body-part-three-body-text flex flex-col gap-10 m-auto text-center">
           <TextBox textBoxHeader="Free, open, simple">
             Blogr is a free and open source application backed by a large
             community of helpful developers. It supports features such as code
