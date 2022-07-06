@@ -1,11 +1,18 @@
 import React from "react";
 import TextBox from "../../Mini Components/TextBox";
+import laptopMobile from "../../../Assets/images/illustration-laptop-mobile.svg";
+import laptopDesktop from "../../../Assets/images/illustration-laptop-desktop.svg";
 
-export default function BodyPartThree() {
+export default function BodyPartThree({ desktop }) {
+  // console.log(desktop);
   return (
     <div className="body-part-three-container">
       <div className="body-part-three-body">
-        <img className="body-part-three-image" src="" alt="" />
+        <img
+          className="body-part-three-image m-auto"
+          src={desktop ? laptopDesktop : laptopMobile}
+          alt=""
+        />
         <div className="body-part-three-body-text flex flex-col gap-10 m-auto text-center">
           <TextBox textBoxHeader="Free, open, simple">
             Blogr is a free and open source application backed by a large

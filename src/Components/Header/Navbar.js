@@ -28,7 +28,7 @@ export default function Navbar() {
 
       <div
         onClick={() => setIsNavOpen((preBoolean) => !preBoolean)}
-        className="hamburger-img-container pr-5"
+        className="hamburger-img-container pr-5 cursor-pointer	"
       >
         <img src={isNavOpen ? closeNavButton : hamburger} alt="" className="" />
       </div>
@@ -41,6 +41,7 @@ export default function Navbar() {
       >
         <div className="navigation-links-container overflow-hidden flex flex-col text-black gap-10 m-auto w-full">
           <NavItem
+            arrowUp={isProductSubItems}
             navItemHeading="Product"
             onClick={() => setIsProductSubItems((preBoolean) => !preBoolean)}
           >
@@ -59,6 +60,7 @@ export default function Navbar() {
           </NavItem>
 
           <NavItem
+            arrowUp={isCompanySubItems}
             navItemHeading="Company"
             onClick={() => setIsCompanySubItems((preBoolean) => !preBoolean)}
           >
@@ -76,6 +78,7 @@ export default function Navbar() {
           </NavItem>
 
           <NavItem
+            arrowUp={isConnectSubItems}
             navItemHeading="Connect"
             onClick={() => setIsConnectSubItems((preBoolean) => !preBoolean)}
           >
@@ -92,11 +95,17 @@ export default function Navbar() {
           </NavItem>
           {/* end of navigation-links-container div */}
         </div>
-        <div className="user-login-container flex flex-col border-t-2 p-5 pt-10 gap-5">
-          <button className="user-login-links font-bold text-xl" type="button">
+        <div className="user-login-container flex flex-col border-t-2 pt-10 ">
+          <button
+            className="user-login-links font-bold text-xl w-max m-auto px-10 py-4 "
+            type="button"
+          >
             Login
           </button>
-          <button className="user-login-links font-bold text-xl" type="button">
+          <button
+            className="sign-up user-login-links font-bold text-xl text-white border w-max m-auto px-10 py-4 rounded-full hover:opacity-80"
+            type="button"
+          >
             Sign Up
           </button>
           {/* end of user-login-container div */}

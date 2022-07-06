@@ -2,6 +2,7 @@ import React from "react";
 import SubNavItem from "../Mini Components/Navbar/SubNavItem";
 import NavItem from "../Mini Components/Navbar/NavItem";
 import bottomLogo from "../../Assets/images/logo.svg";
+import "./Footer.css";
 
 import "../Mini Components/Navbar/NavItem.css";
 
@@ -15,7 +16,7 @@ export default function Footer() {
       <div className="nav-items-container flex flex-col ">
         <div className="navigation-links-container flex flex-col gap-10 text-center">
           <NavItem navItemHeading="Product">
-            <div className="flex flex-col text-slate-400">
+            <div className="flex flex-col overflow-hidden gap-5 w-10/12 m-auto p-5 text-md font-semibold rounded-md ">
               <SubNavItem SubNavItemName="Overview" />
               <SubNavItem SubNavItemName="Pricing" />
               <SubNavItem SubNavItemName="Marketplace" />

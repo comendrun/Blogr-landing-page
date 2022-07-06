@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --nav-item-bg-img: url("../../../Assets/images/icon-arrow-dark.svg");
 }
 @media (min-width: 1000px) {
@@ -12,9 +12,8 @@
 
   background-position: right;
   background-repeat: no-repeat;
-  /* border: 1px solid red; */
 }
 
 footer .nav-item-heading {
   background-image: none;
-}
+} */

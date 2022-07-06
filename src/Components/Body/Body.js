@@ -1,15 +1,16 @@
 import React from "react";
-import './Body.css'
+import "./Body.css";
 import BodyPartOne from "./Body Parts/BodyPartOne";
 import BodyPartThree from "./Body Parts/BodyPartThree";
 import BodyPartTwo from "./Body Parts/BodyPartTwo";
 
-export default function Body() {
+export default function Body({ isDesktop }) {
+  // console.log(isDesktop);
   return (
-    <section className="body-container flex flex-col gap-y-10 ">
-      <BodyPartOne />
+    <section className="body-container flex flex-col gap-y-10 max-w-4xl dektop: max-w-full">
+      <BodyPartOne desktop={isDesktop} />
       <BodyPartTwo />
-      <BodyPartThree />
+      <BodyPartThree desktop={isDesktop} />
     </section>
   );
 }
