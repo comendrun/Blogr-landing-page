@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
 import "./Header.css";
 
 export default function Header() {
+  const [headerHeight, setHeaderHeight] = useState(null)
+  const [showNavBG, setShowNavBG] = useState(false)
+  const header = useRef()
+
+  // console.log(showNavBG)
+
+  function scrollingValue(){
+    const scroll = document.documentElement.scrollTop
+    if(scroll > headerHeight - 200){
+      setShowNavBG(true)
+    } else{
+      setShowNavBG(false)
+    }
+  }
+
+
+  window.addEventListener("scroll",scrollingValue)
+  
+  
+  useEffect(()=>{
+    setHeaderHeight(header.current?.clientHeight)
+  },[header])
   return (
-    <section className="header bg-red-400 flex flex-col justify-center items-center py-32">
-      <Navbar />
-      <div className="header-body-container m-auto flex flex-col gap-y-10 justify-center items-center text-white">
+    <section ref={header} className="header bg-red-400 flex flex-col justify-center items-center py-32">
+      <Navbar showNavBG={showNavBG}/>
+      <div className="header-body-container m-auto flex flex-col gap-y-10 justify-center items-center text-white desktop:w-full ">
         <h1 className="text-center text-4xl font-bold px-8 max-w-md">
           A modern publishing platform
         </h1>

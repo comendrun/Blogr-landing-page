@@ -11,24 +11,66 @@
   z-index: 99;
 }
 
-.overlay {
-  z-index: 1;
+
+@media (max-width:1100px){
+  .nav-item-heading{
+    width: 150px;
+  }
+  .overlay {
+    z-index: 1;
+  }
+  .not-active {
+    transform: translateY(-200%);
+    transition: transform 0.5s ease;
+  }
+  
+  .active {
+    transform: translateY(0%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+  }
+  .sign-up {
+    background: linear-gradient(to left, #fb4554, #ff876f);
+  }
+  .nav-overlay{
+    display: none;
+  }
+}
+.sign-up{
+  color: #ff515b;
 }
 
-.not-active {
-  transform: translateY(-200%);
-  transition: transform 0.5s ease;
+.nav-overlay{
+  width: 95vw;
+  height: 78px;
+  display: inline;
+  position:fixed;
+  margin: 0;
+  padding: 0;
+  margin-left: -2rem;
+  margin-top: -10px;
+  border-radius: 16px;
 }
 
-.active {
-  transform: translateY(0%);
-  transition: transform 0.5s ease;
-  z-index: 1000;
-}
 
 .nav-items-container {
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   z-index: 99;
+}
+
+@media (min-width:1100px){
+  .nav-items-container{
+    position: relative;    
+    box-shadow: none;
+  }
+  .hamburger-img-container{
+    display: none;
+  }
+  .nav-overlay.show{
+     background-color: rgba(255, 83, 93,0.6);
+     transition: background-color 0.5s ease;
+
+  }
 }
 
 .hidden {
@@ -51,6 +93,7 @@
 }
 
 .navigation-links-container {
+  
 }
 
 .hidden {
@@ -62,7 +105,7 @@
 :root {
   --nav-item-arrow-down-img: url("../../Assets/images/icon-arrow-dark.svg");
 }
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   :root {
     --nav-item-arrow-down-img: url("../../Assets/images/icon-arrow-light.svg");
   }
@@ -70,10 +113,9 @@
 
 .nav-item-heading {
   background-repeat: no-repeat;
-  width: 150px;
+  
   align-items: center;
-  padding-right: -2rem;
-
+  padding-right: 4rem;
   /* border: 1px solid red; */
 }
 
@@ -85,10 +127,17 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.5s ease;
+  /* border: 1px solid white; */
 }
 .arrow-up {
   transform: rotate(180deg);
   transition: transform 0.5s ease;
+}
+
+.nav-item-heading{
+  /* border: 1px solid red; */
+  /* justify-content: flex-start; */
+  /* width: 100%; */
 }
 
 /* .nav-item-heading .nav-open .arrow-image {
@@ -104,6 +153,4 @@ footer .arrow-image {
   color: rgb(255, 106, 102);
 }
 
-.sign-up {
-  background: linear-gradient(to left, #fb4554, #ff876f);
-}
+

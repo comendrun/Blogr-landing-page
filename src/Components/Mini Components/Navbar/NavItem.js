@@ -7,12 +7,12 @@ export default function NavItem({
   arrowUp,
 }) {
   return (
-    <div className="nav-item w-full">
+    <div className="nav-item w-full ">
       <div
         onClick={onClick}
-        className="nav-item-heading mb-5 text-inherit m-auto cursor-pointer	hover:opacity-60 flex"
+        className="nav-item-heading mb-5 desktop:mb-0 text-inherit m-auto desktop:m-0 cursor-pointer hover:opacity-60 flex desktop:w-56 desktop: "
       >
-        <p className="text-inherit font-bold text-2xl m-auto ">
+        <p className="text-inherit font-bold text-2xl m-auto desktop:px-5 desktop:py-4  desktop:text-white">
           {navItemHeading}
         </p>
         <div className={`arrow-image ${arrowUp && "arrow-up"}`}></div>

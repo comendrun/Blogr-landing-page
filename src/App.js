@@ -5,10 +5,10 @@ import Footer from "./Components/Footer/Footer";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth>900);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth>1100);
 
   function detectSize() {
-    if (window.innerWidth > 900) {
+    if (window.innerWidth > 1100) {
       setIsDesktop(true);
     } else {
       setIsDesktop(false);
