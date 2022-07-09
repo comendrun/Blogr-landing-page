@@ -13,7 +13,7 @@ export default function Navbar({showNavBG}) {
   const [isConnectSubItems, setIsConnectSubItems] = useState(false);
 
   return (
-    <nav className="navbar flex flex-row fixed top-0 desktop: desktop:top-4 justify-between items-center desktop:items-start mb-auto desktop:mb-0 w-full desktop:w-screen px-4 py-8 desktop:px-20 desktop:py-0 desktop:gap-20 ">
+    <nav className="navbar flex flex-row fixed top-0 desktop: desktop:top-4 justify-between items-center desktop:items-start mb-auto desktop:mb-0 w-full desktop:w-[95vw] px-4 py-8 desktop:px-0 desktop:py-0 desktop:gap-20 ">
       <div
         onClick={() => setIsNavOpen((preBoolean) => !preBoolean)}
         className={
@@ -22,8 +22,10 @@ export default function Navbar({showNavBG}) {
             : "hidden"
         }
       ></div>
-      <div className="logo-container desktop: desktop:py-4 desktop:pt-2">
+      <div className="logo-container desktop: desktop:py-4 desktop:pt-2 cursor-pointer flex-shrink-1">
+        <a href="/">
         <img src={topLogo} alt="" className="top-logo" />
+        </a>
       </div>
 
       <div
@@ -35,20 +37,24 @@ export default function Navbar({showNavBG}) {
         <div className={`nav-overlay ${showNavBG && "show"}`}></div>
       <div
         className={
-          "nav-items-container rounded-md flex flex-col desktop:flex-row fixed desktop:relative top-32 desktop:top-0  left-0 right-0 text-center w-10/12  bg-white desktop:bg-transparent m-auto text-black py-10 desktop:py-0 gap-10 desktop:justify-between desktop:items-start desktop:w-full desktop:justify-start " +
+          "nav-items-container rounded-md flex flex-col desktop:flex-row fixed desktop:relative top-32 desktop:top-0  left-0 right-0 text-center w-10/12  bg-white desktop:bg-transparent m-auto text-black py-10 desktop:py-0 gap-10 desktop:gap-0 desktop:justify-start desktop:items-start desktop:w-full desktop:justify-start " +
           `${isNavOpen ? "active" : "not-active"}`
         }
       >
 
-        <div className="navigation-links-container overflow-hidden flex flex-col desktop:flex-row text-black gap-10 desktop:gap-2 m-auto desktop:m-0 w-full desktop:w-max ">
+        <div className="navigation-links-container overflow-hidden flex flex-col desktop:flex-row text-black gap-10 desktop:gap-1 m-auto desktop:m-0 w-full desktop:w-max desktop:mr-auto ">
           <NavItem
             arrowUp={isProductSubItems}
             navItemHeading="Product"
-            onClick={() => setIsProductSubItems((preBoolean) => !preBoolean)}
+            onClick={() => {
+              setIsProductSubItems((preBoolean) => !preBoolean)
+              setIsCompanySubItems(false)
+              setIsConnectSubItems(false)
+              }}
           >
             <div
               className={
-                " flex flex-col overflow-hidden gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md  " +
+                " flex flex-col overflow-hidden desktop:overflow-visible gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md " +
                 `${isProductSubItems ? "nav-open" : "collapse"}`
               }
             >
@@ -63,11 +69,15 @@ export default function Navbar({showNavBG}) {
           <NavItem
             arrowUp={isCompanySubItems}
             navItemHeading="Company"
-            onClick={() => setIsCompanySubItems((preBoolean) => !preBoolean)}
+            onClick={() => {
+              setIsProductSubItems(false)
+              setIsCompanySubItems((preBoolean) => !preBoolean)
+              setIsConnectSubItems(false)
+              }}
           >
             <div
               className={
-                " flex flex-col overflow-hidden gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md " +
+                " flex flex-col overflow-hidden desktop:overflow-visible gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md " +
                 `${isCompanySubItems ? "nav-open" : "collapse"}`
               }
             >
@@ -81,11 +91,15 @@ export default function Navbar({showNavBG}) {
           <NavItem
             arrowUp={isConnectSubItems}
             navItemHeading="Connect"
-            onClick={() => setIsConnectSubItems((preBoolean) => !preBoolean)}
+            onClick={() =>{
+              setIsProductSubItems(false)
+              setIsCompanySubItems(false)
+              setIsConnectSubItems((preBoolean) => !preBoolean)
+              }}
           >
             <div
               className={
-                " flex flex-col overflow-hidden gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md " +
+                " flex flex-col overflow-hidden desktop:overflow-visible gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md " +
                 `${isConnectSubItems ? "nav-open" : "collapse"}`
               }
             >
