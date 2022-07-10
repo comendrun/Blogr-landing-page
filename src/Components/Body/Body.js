@@ -7,7 +7,7 @@ import BodyPartTwo from "./Body Parts/BodyPartTwo";
 export default function Body({ isDesktop }) {
   // console.log(isDesktop);
   return (
-    <section className="body-container flex flex-col gap-y-10 max-w-4xl dektop: max-w-full">
+    <section className="body-container flex flex-col gap-y-10 max-w-4xl desktop:gap-y-[10rem] max-w-full">
       <BodyPartOne desktop={isDesktop} />
       <BodyPartTwo />
       <BodyPartThree desktop={isDesktop} />

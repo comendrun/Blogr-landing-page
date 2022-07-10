@@ -9,11 +9,19 @@
 
 
 @media (min-width:1100px){
+  
   .body-part-one-image{
     max-width: 50vw;
     margin-right: -170px;
   }
+  .body-part-three-image{
+    max-width: 60vw;
+    margin-left: -170px;
+  }
   .body-part-one-container,.body-part-two-container,.body-part-three-container{
     width: 100vw;
+  }
+  .body-part-two-container{
+    min-height: 25rem;
   }
 }

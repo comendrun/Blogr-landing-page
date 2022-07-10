@@ -6,14 +6,15 @@ import laptopDesktop from "../../../Assets/images/illustration-laptop-desktop.sv
 export default function BodyPartThree({ desktop }) {
   // console.log(desktop);
   return (
-    <div className="body-part-three-container">
-      <div className="body-part-three-body">
+    <div className="body-part-three-container ">
+      <div className="body-part-three-body desktop:flex">
         <img
-          className="body-part-three-image m-auto"
+          className="body-part-three-image m-auto desktop:flex-1 desktop:m-0"
           src={desktop ? laptopDesktop : laptopMobile}
           alt=""
         />
-        <div className="body-part-three-body-text flex flex-col gap-10 m-auto text-center">
+        <div className="body-part-three-body-text flex flex-col gap-10 m-auto text-center desktop:flex-1 desktop:max-w-[50%] desktop:mx-0">
+          <div className="desktop:w-[90%]">
           <TextBox textBoxHeader="Free, open, simple">
             Blogr is a free and open source application backed by a large
             community of helpful developers. It supports features such as code
@@ -27,6 +28,7 @@ export default function BodyPartThree({ desktop }) {
             that makes customization and deployment a breeze, but capable of
             producing even the most complicated sites.
           </TextBox>
+          </div>
           {/* end of body-part-three-body-text div */}
         </div>
 

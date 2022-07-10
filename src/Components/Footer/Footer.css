@@ -2,3 +2,28 @@ footer {
   border-radius: 0 80px 0 0;
   z-index: 0;
 }
+
+@media (min-width: 1100px) {
+  footer .nav-item {
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer .nav-item .nav-item-heading{
+    justify-content: flex-start;
+  }
+  footer .nav-item .nav-item-heading p{
+    margin: 0;
+    padding-inline:0;
+  }
+
+  footer .nav-item .sub-nav-items-container{
+    margin: 0;
+    padding: 0;
+  }
+  footer .nav-item .sub-nav-items-container a{
+    border: 1px solid white;
+    
+  }
+}
