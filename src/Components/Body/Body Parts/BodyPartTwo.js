@@ -4,11 +4,11 @@ import mobileImage from "../../../Assets/images/illustration-phones.svg";
 
 export default function BodyPartTwo() {
   return (
-    <div className="body-part-two-container flex flex-col desktop:flex-row bg-indigo-900 mt-64 desktop:mt-0 desktop:px-30">
+    <div className="body-part-two-container flex flex-col desktop:flex-row mt-64 desktop:mt-0 desktop:px-30">
 
       <div className="body-part-two-image-container mx-auto  ">
         <img
-          className="body-part-two-image -mt-52 desktop:mt-0 mb-10 desktop:mb-0  desktop:object-contain desktop:w-[40rem] desktop:h-[35rem] desktop:-mt-16 desktop:absolute desktop:left-0 "
+          className="body-part-two-image -mt-52 desktop:mt-0 mb-10 desktop:mb-0  desktop:object-contain desktop:w-[50%] desktop:h-[35rem] desktop:-mt-16 desktop:absolute desktop:left-0 "
           src={mobileImage}
           alt=""
         />

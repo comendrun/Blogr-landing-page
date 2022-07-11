@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <section
       ref={header}
-      className="header bg-red-400 flex flex-col justify-center items-center py-32 desktop:py-0"
+      className="header flex flex-col justify-center items-center py-32 desktop:py-0"
     >
       <Navbar showNavBG={showNavBG} />
       <div className="header-body-container m-auto flex flex-col gap-y-10 justify-center items-center text-white desktop:w-full ">

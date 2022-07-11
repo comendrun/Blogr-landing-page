@@ -15,9 +15,9 @@ export default function Footer() {
 
       <div className="nav-items-container flex flex-col  desktop:gap-20  desktop:w-[60%] desktop:justify-center desktop:items-evenly">
         <div className="navigation-links-container flex flex-col gap-10 text-center desktop:flex-row desktop:text-left ">
-          <div className="desktop: desktop:text-left desktop:m-0 desktop:w-[30%]">
+          <div className="desktop: desktop:text-left desktop:m-0 desktop:w-[30%] desktop:">
             <NavItem navItemHeading="Product">
-              <div className="flex flex-col overflow-hidden gap-5 w-10/12 m-auto p-5 text-md font-semibold rounded-md ">
+              <div className="flex flex-col gap-2 desktop:gap-5 m-auto p-5 desktop:font-semibold text-slate-400  w-[100%] desktop:p-0 desktop:py-5">
                 <SubNavItem SubNavItemName="Overview" />
                 <SubNavItem SubNavItemName="Pricing" />
                 <SubNavItem SubNavItemName="Marketplace" />
@@ -26,9 +26,9 @@ export default function Footer() {
               </div>
             </NavItem>
           </div>
-          <div className="desktop: desktop:text-left desktop:m-0 desktop:w-[30%]">
+          <div className="desktop: desktop:text-left desktop:m-0 desktop:w-[30%] desktop:gap-">
             <NavItem navItemHeading="Company">
-              <div className="flex flex-col text-slate-400">
+              <div className="flex flex-col gap-2 desktop:gap-5 m-auto p-5 desktop:font-semibold text-slate-400  w-[100%] desktop:p-0 desktop:py-5">
                 <SubNavItem SubNavItemName="About" />
                 <SubNavItem SubNavItemName="Team" />
                 <SubNavItem SubNavItemName="Blog" />
@@ -36,9 +36,9 @@ export default function Footer() {
               </div>
             </NavItem>
           </div>
-          <div className="desktop: desktop:text-left desktop:m-0 desktop:w-[30%]">
+          <div className="desktop: desktop:text-left desktop:m-0 desktop:w-[30%] desktop:gap-">
             <NavItem navItemHeading="Connect">
-              <div className="flex flex-col text-slate-400">
+              <div className="flex flex-col gap-2 desktop:gap-5 m-auto p-5 desktop:font-semibold text-slate-400  w-[100%] desktop:p-0 desktop:py-5">
                 <SubNavItem SubNavItemName="Contact" />
                 <SubNavItem SubNavItemName="Newsletter" />
                 <SubNavItem SubNavItemName="LinkedIn" />

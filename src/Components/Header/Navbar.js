@@ -37,12 +37,12 @@ export default function Navbar({showNavBG}) {
         <div className={`nav-overlay ${showNavBG && "show"}`}></div>
       <div
         className={
-          "nav-items-container rounded-md flex flex-col desktop:flex-row fixed desktop:relative top-32 desktop:top-0  left-0 right-0 text-center w-10/12  bg-white desktop:bg-transparent m-auto text-black py-10 desktop:py-0 gap-10 desktop:gap-0 desktop:justify-start desktop:items-start desktop:w-full desktop:justify-start " +
+          "nav-items-container rounded-md flex flex-col desktop:flex-row fixed desktop:relative top-24 desktop:top-0  left-0 right-0 text-center w-10/12  bg-white desktop:bg-transparent m-auto text-black py-10 desktop:py-0 gap-10 desktop:gap-0 desktop:justify-start desktop:items-start desktop:w-full desktop:justify-start  " +
           `${isNavOpen ? "active" : "not-active"}`
         }
       >
 
-        <div className="navigation-links-container overflow-hidden flex flex-col desktop:flex-row text-black gap-10 desktop:gap-1 m-auto desktop:m-0 w-full desktop:w-max desktop:mr-auto ">
+        <div className="navigation-links-container overflow-hidden flex flex-col desktop:flex-row text-black gap-10 desktop:gap-1 m-auto desktop:m-0 w-full desktop:w-max desktop:mr-auto  ">
           <NavItem
             arrowUp={isProductSubItems}
             navItemHeading="Product"
@@ -54,7 +54,7 @@ export default function Navbar({showNavBG}) {
           >
             <div
               className={
-                " flex flex-col overflow-hidden desktop:overflow-visible gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md " +
+                " flex flex-col overflow-hidden desktop:overflow-visible gap-5 bg-slate-200 desktop:bg-white w-10/12 desktop:w-full m-auto desktop:m-0 p-5 desktop:px-8 text-md desktop:items-start rounded-md desktop:mt-2 " +
                 `${isProductSubItems ? "nav-open" : "collapse"}`
               }
             >
@@ -111,7 +111,7 @@ export default function Navbar({showNavBG}) {
           {/* end of navigation-links-container div */}
         </div>
 
-        <div className="user-login-container flex flex-col desktop:flex-row border-t-2 desktop:border-0 pt-10 desktop:p-0 desktop:pt-0 ">
+        <div className="user-login-container flex flex-col desktop:flex-row border-t-2 desktop:border-0 pt-2 desktop:p-0 desktop:pt-0 ">
           <button
             className="user-login-links font-bold text-xl w-max m-auto px-10 py-4 desktop:text-white desktop:hover:opacity-80"
             type="button"

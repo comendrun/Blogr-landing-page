@@ -4,6 +4,12 @@
   border-radius: 0 0 0 90px;
   min-height: 40rem;
   z-index: 100;
+  background-image: linear-gradient(to bottom,#ff896f,  #ff4658), url('../../Assets/images/bg-pattern-intro-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center, center -200px;
+  background-size:auto, 300%;
+  background-blend-mode:saturation;
+  
 }
 
 .logo-container,
@@ -35,9 +41,7 @@
     display: none;
   }
 }
-.sign-up {
-  color: #ff515b;
-}
+
 
 .nav-overlay {
   width: 100vw;
@@ -57,7 +61,14 @@
   z-index: 99;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1100px) { 
+  .header{
+    background-image: linear-gradient(to right,#ff896f,  #ff4658), url('../../Assets/images/bg-pattern-intro-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-size:auto;
+    background-blend-mode:saturation;
+}
   .nav-items-container {
     position: relative;
     box-shadow: none;
@@ -65,13 +76,18 @@
   .hamburger-img-container {
     display: none;
   }
-  .nav-overlay.show {
-    background-color: rgba(255, 83, 93, 0.6);
-    transition: background-color 0.5s ease;
-  }
+  
   .nav-item-heading{
     padding-right: 3rem;
   }
+  .sign-up {
+    color: #ff515b;
+  }
+}
+
+.nav-overlay.show {
+  background-color: rgba(255, 83, 93, 0.6);
+  transition: background-color 0.5s ease;
 }
 
 .hidden {
