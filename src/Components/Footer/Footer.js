@@ -2,9 +2,9 @@ import React from "react";
 import SubNavItem from "../Mini Components/Navbar/SubNavItem";
 import NavItem from "../Mini Components/Navbar/NavItem";
 import bottomLogo from "../../Assets/images/logo.svg";
-import "./Footer.css";
 
-import "../Mini Components/Navbar/NavItem.css";
+// stylesheet
+import "./Footer.css";
 
 export default function Footer() {
   return (

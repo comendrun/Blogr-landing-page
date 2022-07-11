@@ -6,7 +6,7 @@ import topLogo from "../../Assets/images/logo.svg";
 import hamburger from "../../Assets/images/icon-hamburger.svg";
 import closeNavButton from "../../Assets/images/icon-close.svg";
 
-export default function Navbar({showNavBG}) {
+export default function Navbar({ showNavBG }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isProductSubItems, setIsProductSubItems] = useState(false);
   const [isCompanySubItems, setIsCompanySubItems] = useState(false);
@@ -24,7 +24,7 @@ export default function Navbar({showNavBG}) {
       ></div>
       <div className="logo-container desktop: desktop:py-4 desktop:pt-2 cursor-pointer flex-shrink-1">
         <a href="/">
-        <img src={topLogo} alt="" className="top-logo" />
+          <img src={topLogo} alt="" className="top-logo" />
         </a>
       </div>
 
@@ -34,23 +34,95 @@ export default function Navbar({showNavBG}) {
       >
         <img src={isNavOpen ? closeNavButton : hamburger} alt="" className="" />
       </div>
-        <div className={`nav-overlay ${showNavBG && "show"}`}></div>
+      <div className={`nav-overlay ${showNavBG && "show"}`}></div>
+
+      <div className="login-container rounded-md grid absolute top-24 left-0 right-0 text-center w-10/12 max-w-[70rem]  bg-white m-auto text-black py-5 desktop:py-10 desktop:py-0 gap-10 desktop:gap-0 desktop:justify-start desktop:w-[100%] h-max desktop:py-10 z-[101] m-auto grid-cols-1 desktop:grid-cols-2 active">
+        <div className="login w-full m-auto desktop:mt-0 grid-1 h-full">
+          <form className="flex flex-col gap-1 max-w-[25rem] m-auto desktop:h-full desktop:mt-0 desktop:justify-center ">
+            <h2 className="mb-4 text-3xl font-bold  w-max m-auto px-4">
+              Login
+            </h2>
+            <label className="flex items-center gap-2 px-2 justify-between">
+              <p>Username:</p>
+              <input
+                className="input text-white rounded-md p-2"
+                type="text"
+                name="username"
+                placeholder="Your username..."
+              />
+            </label>
+
+            <label className="flex items-center gap-2 px-2 justify-between">
+              <p>Password:</p>
+              <input
+                className="input max-w-[15rem] border-2 border-black text-white rounded-md p-2"
+                type="password"
+                name="password"
+                placeholder="Your password..."
+              />
+            </label>
+            <button className="btn">Sign-in</button>
+          </form>
+        </div>
+
+        <div className="signup grid-1  desktop:border-t-0 desktop:border-l-2 border-black w-full desktop:mt-0 ">
+          <form className="flex flex-col gap-0 max-w-[25rem] m-auto">
+            <div className="not-a-user-container flex-col desktop:flex-col justify-center items-center">
+              <div className="">
+              <p>Not a user yet?</p>
+              </div>
+              <h2 className="mb-4 text-3xl font-bold w-max m-auto desktop:m-auto px-4 ">
+                Sign-Up
+              </h2>
+            </div>
+            <label className="flex items-center gap-2 px-2 justify-between">
+              <p>Your Name:</p>
+              <input
+                className="input max-w-[15rem] border-2 border-black text-white rounded-md p-2"
+                type="text"
+                name="username"
+                placeholder="Your username..."
+              />
+            </label>
+
+            <label className="flex items-center gap-2 px-2 justify-between">
+              <p>Choose a username:</p>
+              <input
+                className="input max-w-[15rem] border-2 border-black text-white rounded-md p-2"
+                type="text"
+                name="username"
+                placeholder="Your username..."
+              />
+            </label>
+
+            <label className="flex items-center gap-2 px-2 justify-between">
+              <p>Pick a password:</p>
+              <input
+                className="input max-w-[15rem] border-2 border-black text-white rounded-md p-2"
+                type="password"
+                name="password"
+                placeholder="Your password..."
+              />
+            </label>
+            <button className="btn">Register</button>
+          </form>
+        </div>
+      </div>
       <div
         className={
           "nav-items-container rounded-md flex flex-col desktop:flex-row fixed desktop:relative top-24 desktop:top-0  left-0 right-0 text-center w-10/12  bg-white desktop:bg-transparent m-auto text-black py-10 desktop:py-0 gap-10 desktop:gap-0 desktop:justify-start desktop:items-start desktop:w-full desktop:justify-start  " +
           `${isNavOpen ? "active" : "not-active"}`
         }
       >
-
         <div className="navigation-links-container overflow-hidden flex flex-col desktop:flex-row text-black gap-10 desktop:gap-1 m-auto desktop:m-0 w-full desktop:w-max desktop:mr-auto  ">
           <NavItem
             arrowUp={isProductSubItems}
             navItemHeading="Product"
             onClick={() => {
-              setIsProductSubItems((preBoolean) => !preBoolean)
-              setIsCompanySubItems(false)
-              setIsConnectSubItems(false)
-              }}
+              setIsProductSubItems((preBoolean) => !preBoolean);
+              setIsCompanySubItems(false);
+              setIsConnectSubItems(false);
+            }}
           >
             <div
               className={
@@ -70,10 +142,10 @@ export default function Navbar({showNavBG}) {
             arrowUp={isCompanySubItems}
             navItemHeading="Company"
             onClick={() => {
-              setIsProductSubItems(false)
-              setIsCompanySubItems((preBoolean) => !preBoolean)
-              setIsConnectSubItems(false)
-              }}
+              setIsProductSubItems(false);
+              setIsCompanySubItems((preBoolean) => !preBoolean);
+              setIsConnectSubItems(false);
+            }}
           >
             <div
               className={
@@ -91,11 +163,11 @@ export default function Navbar({showNavBG}) {
           <NavItem
             arrowUp={isConnectSubItems}
             navItemHeading="Connect"
-            onClick={() =>{
-              setIsProductSubItems(false)
-              setIsCompanySubItems(false)
-              setIsConnectSubItems((preBoolean) => !preBoolean)
-              }}
+            onClick={() => {
+              setIsProductSubItems(false);
+              setIsCompanySubItems(false);
+              setIsConnectSubItems((preBoolean) => !preBoolean);
+            }}
           >
             <div
               className={

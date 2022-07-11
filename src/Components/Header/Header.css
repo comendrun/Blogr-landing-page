@@ -4,12 +4,13 @@
   border-radius: 0 0 0 90px;
   min-height: 40rem;
   z-index: 100;
-  background-image: linear-gradient(to bottom,#ff896f,  #ff4658), url('../../Assets/images/bg-pattern-intro-mobile.svg');
+  background-image: linear-gradient(to bottom, #ff896f, #ff4658),
+    url("../../Assets/images/bg-pattern-intro-mobile.svg");
   background-repeat: no-repeat;
   background-position: center, center -200px;
-  background-size:auto, 300%;
-  background-blend-mode:saturation;
-  
+  background-size: auto, 300%;
+  background-blend-mode: saturation;
+  overflow: scroll;
 }
 
 .logo-container,
@@ -17,7 +18,19 @@
   z-index: 99;
 }
 
+.login-container.active {
+  transform: translateY(0%);
+  transition: transform 0.5s ease;
+  z-index: 1000;
+}
+.login-container.not-active {
+  transform: translateY(-200%);
+  transition: transform 0.5s ease;
+}
+
 @media (max-width: 1100px) {
+  .navbar {
+  }
   .nav-item-heading {
     width: 150px;
   }
@@ -42,7 +55,6 @@
   }
 }
 
-
 .nav-overlay {
   width: 100vw;
   height: 78px;
@@ -61,14 +73,15 @@
   z-index: 99;
 }
 
-@media (min-width: 1100px) { 
-  .header{
-    background-image: linear-gradient(to right,#ff896f,  #ff4658), url('../../Assets/images/bg-pattern-intro-desktop.svg');
+@media (min-width: 1100px) {
+  .header {
+    background-image: linear-gradient(to right, #ff896f, #ff4658),
+      url("../../Assets/images/bg-pattern-intro-desktop.svg");
     background-repeat: no-repeat;
     background-position: center, center;
-    background-size:auto;
-    background-blend-mode:saturation;
-}
+    background-size: auto;
+    background-blend-mode: saturation;
+  }
   .nav-items-container {
     position: relative;
     box-shadow: none;
@@ -76,8 +89,8 @@
   .hamburger-img-container {
     display: none;
   }
-  
-  .nav-item-heading{
+
+  .nav-item-heading {
     padding-right: 3rem;
   }
   .sign-up {
@@ -107,9 +120,8 @@
   transition: all 0.5s ease;
   /* padding: 1rem; */
   z-index: 99;
-  box-shadow: 2px -2px 5px rgba(0,0,0,0.2);
+  box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.2);
   /* border: 5px solid rgba(0, 0, 0, 0.2); */
-  
 }
 
 .navigation-links-container {
@@ -133,7 +145,6 @@
 .nav-item-heading {
   background-repeat: no-repeat;
   align-items: center;
-
 }
 
 .arrow-image {
@@ -152,7 +163,6 @@
 .nav-item-heading {
 }
 
-
 footer .arrow-image {
   background-image: none;
   display: none;
@@ -162,9 +172,101 @@ footer .arrow-image {
   color: rgb(255, 106, 102);
 }
 
-.nav-item-heading{
+.nav-item-heading {
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
-  display: flex;  
+  display: flex;
+}
+
+.login-container {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  display: grid;
+}
+
+.login-container .input {
+  padding: 0.5rem 1rem;
+
+  border-bottom: 1px solid rgba(255, 72, 89, 0.2);
+  border-left: 1px solid rgba(255, 72, 89, 0.2);
+  border-top: 1px solid rgba(255, 72, 89, 0.2);
+  border-right: 1px solid rgba(255, 72, 89, 0.2);
+  border-radius: 0 10px 0 10px;
+  margin: 5px 0;
+  transition: all 0.2s ease-in;
+  color: black;
+}
+
+.login-container .input:hover,
+.login-container .input:focus,
+.login-container .input:active {
+  /* border-bottom: 1px solid white;
+  border-left: 1px solid white; */
+  /* border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2); */
+}
+
+.login-container .btn {
+  padding: 0.6rem;
+  border: 1px solid;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ff876e, #ff4759);
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.login-container h2 {
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #ff886e, #ff4759);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.login-container label {
+  flex-direction: column;
+  gap: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .login-container {
+    font-size: smaller;
+    overflow: scroll;
+  }
+  .login-container .btn {
+    padding: 0.2rem;
+    width: 30%;
+    font-size: 1rem;
+  }
+  .login-container .input {
+
+    font-size: 0.8rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .login-container label{
+    gap: 0;
+    margin: 0;
+  }
+  label input{
+    margin-top: 0;
+  }
+  label p{
+    margin-bottom: -5px;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .login-container {
+  }
+
+  .login-container label {
+    flex-direction: row;
+  }
 }
