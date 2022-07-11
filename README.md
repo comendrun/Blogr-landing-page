@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [ solution URL ](https://www.frontendmentor.io/solutions/using-reactjs-and-tailwind-css-with-mobile-first-approach-5h0Z2kfSk-)
+- Live Site URL: [ live site](https://comendrun.com/Blogr-landing-page/)
 
 ## My process
 
@@ -45,10 +45,8 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Tailwind CSS
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
