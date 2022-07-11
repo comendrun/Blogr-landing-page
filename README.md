@@ -28,7 +28,6 @@ Users should be able to:
 
 ### Screenshot
 
-!["./src/Assets/design/desktop-preview.jpg"](./screenshot.jpg)
 
 
 ### Links
